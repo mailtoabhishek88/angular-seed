@@ -1,0 +1,15 @@
+{
+  "details": [
+    {
+      "name" : "abhishek",
+      "salary" : "50000"
+    },
+    {
+      "name" : "shashank",
+      "salary" : "60000"
+    },
+    
+  ],
+  
+  "greetingMsg": "Hello World"
+}
