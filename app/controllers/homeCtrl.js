@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp').controller('homeController',['$scope','$http' ,'$q',function($scope,$http,$q){
+angular.module('myApp').controller('homeController',['$scope','$http' ,'$q','$state',function($scope,$http,$q,$state){
 		var self = this;
 
 		self.title = 'Home';
@@ -11,7 +11,6 @@ angular.module('myApp').controller('homeController',['$scope','$http' ,'$q',func
 			$http.get('api/employee.json').then(function(response){
 				//self.data = response.data;
 				 //response.data;
-
 				 deferred.resolve(response);
 			});
 			return deferred.promise;
@@ -19,9 +18,11 @@ angular.module('myApp').controller('homeController',['$scope','$http' ,'$q',func
 
 
 		self.getEmployeeDetails().then(function(response){
-				self.data =  response.data;
+			self.data =  response.data;
 		});
 
-
+		self.goToHome = function(stateName){
+			$state.go(stateName);
+		}
 
 }]);

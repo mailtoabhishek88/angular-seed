@@ -24,10 +24,11 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
   <div class="container" ng-app="myApp">
-    <header ng-include="'templates/header.html'"></header>
     
-    <div ui-view></div>
+    <header ng-include="'templates/header.html'"></header>
 
+    <div ui-view></div>
+    <hello-world></hello-world>
     <footer ng-include="'templates/footer.html'"></footer>
   </div>
   
@@ -40,9 +41,11 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script> 
- <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="app.js"></script>
   <script src="controllers/homeCtrl.js"></script>
+ <script src="directives/helloWorldDirective.js"></script> 
+ 
  <!--  <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
