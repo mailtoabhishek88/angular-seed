@@ -1,6 +1,26 @@
 <div>
 	
-	<h1>{{homeCtrl.title}}</h1> 
-	 {{homeCtrl.data.greetingMsg}}
-<button ui-sref="about" class = "btn btn-primary">Go To About</button> 
+	<h1>{{title}}</h1> 
+	This is from JSON :  {{data.greetingMsg}} {{name}}
+	<div>
+		<input type="text" ng-model="name"> <button ng-click="fireBroadCastEvent('BroadCast Event')">BroadCast</button>
+		<br>
+		<input type="text" ng-model="movie" >
+		Movie Name : {{movie}}
+		<br>
+		<input type='text' ng-model='rating'><h5>Movie Rating : {{rating}}</h5>
+		 <div>
+		 	This is via directive :
+		 	 <hello-world movie='movie' rating={{rating}} displayMovieName="displayMovieName(movie)"> </hello-world>
+		 </div>
+		 <button class = "btn btn-primary" ng-click="goToState('about')">Go To About</button>
+	</div>
+
+	<div ng-controller="childController">
+      <p>Good {{timeOfDay | date}}, {{name}}!</p>
+      <input type="text" ng-model="name" ><button ng-click="fireEmitEvent('Emit Event')">Emit</button>
+
+      
+    </div>
+
 </div>

@@ -1,3 +1,4 @@
 about templates 
 <!-- <a ui-sref="home">home</a> -->
-<button ng-click="homeCtrl.goToHome('home')">Go to Home</button>
+<button ng-controller="aboutController" ng-click="goToHome('home')">Go to Home</button>
+<button ng-controller="aboutController" ng-dblclick="goToHome('home')">Go to Home- Click 2 Times</button>

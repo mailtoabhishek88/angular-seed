@@ -5,9 +5,10 @@ angular.module('myApp', [
   'ngRoute',
   'ui.router'
 ]).config(['$locationProvider','$routeProvider','$stateProvider', function($locationProvider,$routeProvider,$stateProvider) {
- // $locationProvider.hashPrefix('/');
+  //$locationProvider.hashPrefix('/');
 
   //$routeProvider.otherwise({redirectTo: '/'});
+  alert('No.1 : Config');
 
   $stateProvider
   	.state('home',{
@@ -17,10 +18,15 @@ angular.module('myApp', [
   		controllerAs : 'homeCtrl'
   	})
   	.state('about',{
-  		url :'/about',
+  		//url :'/about',
   		templateUrl :'templates/about.html',
-      controller : 'homeController',
-      controllerAs : 'homeCtrl'
+      controller : 'aboutController'
   	})
 
 }]);
+
+
+angular.module('myApp').run(function(){
+
+  alert('No. 2 : run');
+});

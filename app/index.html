@@ -17,7 +17,6 @@
 <body>
   <!-- <ul class="menu">
     <li><a href="#!/view1">view1</a></li>
-    <li><a href="" ng-click="clickHandler()">view2</a></li>
   </ul>
  -->
   <!--[if lt IE 7]>
@@ -28,7 +27,7 @@
     <header ng-include="'templates/header.html'"></header>
 
     <div ui-view></div>
-    <hello-world></hello-world>
+    
     <footer ng-include="'templates/footer.html'"></footer>
   </div>
   
@@ -42,9 +41,14 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script> 
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+   
   <script src="app.js"></script>
   <script src="controllers/homeCtrl.js"></script>
- <script src="directives/helloWorldDirective.js"></script> 
+  <script src="controllers/aboutController.js"></script>
+  <script src="controllers/childController.js"></script>
+  <script src="directives/helloWorldDirective.js"></script> 
+  <script src="services/myService.js"></script> 
+
  
  <!--  <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
